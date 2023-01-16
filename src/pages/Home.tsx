@@ -1,6 +1,7 @@
 import todoLogo from "../assets/todo-logo.svg";
 import styles from "./Home.module.css";
 import { NewTask } from "../components/NewTask";
+import { Empty } from "../components/Empty";
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       <div className={styles.content}>
         <NewTask />
       </div>
+      <Empty />
     </div>
   );
 };

@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import plus from "../assets/plus.svg";
 import styles from "./NewTask.module.css";
 
 export const NewTask = () => {
@@ -8,7 +7,7 @@ export const NewTask = () => {
       <input type="text" placeholder="Adicione uma nova tarefa" />
       <button>
         Criar
-        {/* <FontAwesomeIcon icon="fa-regular fa-circle-plus" /> */}
+        <img src={plus} alt="plus" />
       </button>
     </div>
   );

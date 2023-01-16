@@ -7,11 +7,33 @@
   flex: 1;
   height: 54px;
   border-radius: 8px;
-  padding: 0 10px;
+  padding: 0 15px;
+  color: var(--gray-300);
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
 }
 
 .container button {
   height: 54px;
   border-radius: 8px;
   padding: 0 10px;
+  margin-left: 5px;
+  border: 0;
+  color: var(--white);
+  background-color: var(--blue-dark);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container button:hover {
+  background-color: var(--blue);
+  transition: background-color 0.2s;
+}
+
+.container button img {
+  margin-left: 5px;
 }
