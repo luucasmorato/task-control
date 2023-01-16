@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  margin-top: 64px;
+}
+
+.headerTasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tasksCreated {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.completedTasks {
+  display: flex;
+  align-items: center;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.counter {
+  border-radius: 999px;
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+  color: var(--white);
+  margin-left: 8px;
+}
+
+.tasks {
+  margin-top: 24px;
+}
