@@ -1,5 +1,6 @@
 import styles from "./ListTask.module.css";
 import { Empty } from "./Empty";
+import { Task } from "./Task";
 
 export const ListTask = () => {
   return (
@@ -15,7 +16,9 @@ export const ListTask = () => {
         </div>
       </div>
       <div className={styles.tasks}>
-        <Empty />
+        {/* <Empty /> */}
+        <Task content="teste 1" />
+        <Task content="teste 2" />
       </div>
     </div>
   );
