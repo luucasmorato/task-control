@@ -1,6 +1,7 @@
 import styles from "./ListTask.module.css";
 import { Empty } from "./Empty";
 import { Task } from "./Task";
+import { useState } from "react";
 
 type ListTaskProps = {
   tasks: string[];
@@ -8,6 +9,8 @@ type ListTaskProps = {
 };
 
 export const ListTask = ({ tasks, setTasks }: ListTaskProps) => {
+  const [countTasksCompleted, setCountTasksCompleted] = useState(0);
+
   return (
     <div className={styles.container}>
       <div className={styles.headerTasks}>
@@ -17,13 +20,22 @@ export const ListTask = ({ tasks, setTasks }: ListTaskProps) => {
         </div>
         <div className={styles.completedTasks}>
           Concluídas
-          <div className={styles.counter}> 0 de {tasks.length} </div>
+          <div className={styles.counter}>
+            {countTasksCompleted} de {tasks.length}
+          </div>
         </div>
       </div>
       <div className={styles.tasks}>
         {tasks.length ? (
           tasks.map((task) => (
-            <Task content={task} tasks={tasks} setTasks={setTasks} />
+            <Task
+              content={task}
+              tasks={tasks}
+              setTasks={setTasks}
+              countTasksCompleted={countTasksCompleted}
+              setCountTasksCompleted={setCountTasksCompleted}
+              key={task}
+            />
           ))
         ) : (
           <Empty />
