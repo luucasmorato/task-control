@@ -9,28 +9,40 @@
   margin: 12px 0;
 }
 
-input[type="checkbox"]:checked {
-  background-color: var(--purple-dark);
-}
-
 button {
   cursor: pointer;
   border: 0;
   background-color: transparent;
 }
 
-input {
-  margin-right: 10px;
+.containerCheck {
+  width: 100%;
 }
 
-input:checked + label {
+label input:checked + div + span {
   color: var(--gray-300);
   text-decoration: line-through;
 }
 
-input[type="checkbox"]:before {
+label input:checked + div {
+  background-color: var(--purple-dark);
+  border: 2px solid var(--purple-dark);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.check {
+  height: 17px;
+  width: 17px;
+  border: 2px solid var(--blue);
   border-radius: 50%;
-  display: block;
-  position: absolute;
-  background: red;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
 }

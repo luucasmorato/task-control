@@ -8,10 +8,11 @@ type TaskProps = {
 export const Task = ({ content }: TaskProps) => {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.containerCheck}>
         <label>
           <input type="checkbox" />
-          {content}
+          <div className={styles.check}></div>
+          <span>{content}</span>
         </label>
       </div>
       <button onClick={() => {}} title="Deletar tarefa">
