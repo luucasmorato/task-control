@@ -3,9 +3,18 @@ import styles from "./Task.module.css";
 
 type TaskProps = {
   content: string;
+  tasks: string[];
+  setTasks: (tasks: string[]) => void;
 };
 
-export const Task = ({ content }: TaskProps) => {
+export const Task = ({ content, tasks, setTasks }: TaskProps) => {
+  function handleRemoveTask() {
+    let newArrayTasks = [];
+
+    newArrayTasks = tasks.filter((task) => task !== content);
+    setTasks(newArrayTasks);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.containerCheck}>
@@ -15,7 +24,7 @@ export const Task = ({ content }: TaskProps) => {
           <span>{content}</span>
         </label>
       </div>
-      <button onClick={() => {}} title="Deletar tarefa">
+      <button onClick={handleRemoveTask} title="Deletar tarefa">
         <Trash size={24} color="var(--gray-300)" />
       </button>
     </div>

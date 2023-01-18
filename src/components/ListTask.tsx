@@ -22,7 +22,9 @@ export const ListTask = ({ tasks, setTasks }: ListTaskProps) => {
       </div>
       <div className={styles.tasks}>
         {tasks.length ? (
-          tasks.map((task) => <Task content={task} />)
+          tasks.map((task) => (
+            <Task content={task} tasks={tasks} setTasks={setTasks} />
+          ))
         ) : (
           <Empty />
         )}
