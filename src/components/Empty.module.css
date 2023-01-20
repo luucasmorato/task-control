@@ -15,4 +15,5 @@
 .container p {
   color: var(--gray-300);
   line-height: 140%;
+  text-align: center;
 }

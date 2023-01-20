@@ -5,7 +5,6 @@ export const Empty = () => {
   return (
     <div className={styles.container}>
       <img src={clipboard} alt="clipboard" />
-
       <p>
         <b>Você ainda não tem tarefas cadastradas</b>
       </p>

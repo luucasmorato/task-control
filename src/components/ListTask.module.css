@@ -14,6 +14,14 @@
   align-items: center;
   color: var(--blue);
   font-weight: 700;
+  font-size: 1rem;
+  width: min-content;
+}
+
+@media (min-width: 500px) {
+  .tasksCreated {
+    white-space: nowrap;
+  }
 }
 
 .completedTasks {
@@ -21,6 +29,7 @@
   align-items: center;
   color: var(--purple);
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .counter {
@@ -29,6 +38,7 @@
   padding: 2px 8px;
   color: var(--white);
   margin-left: 8px;
+  font-size: 0.875rem;
 }
 
 .tasks {

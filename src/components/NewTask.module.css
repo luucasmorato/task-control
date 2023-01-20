@@ -1,6 +1,8 @@
 .container {
   display: flex;
   margin-top: -26px;
+  align-items: center;
+  justify-content: center;
 }
 
 .container input {
